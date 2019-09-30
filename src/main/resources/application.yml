@@ -1,0 +1,29 @@
+server:
+  port: 9021
+  context-path: /${spring.application.name}
+spring:
+  application:
+    name: barcode_scanner_service
+  datasource:
+    url: jdbc:mysql://rds6sn0t8dhm18k0g366o.mysql.rds.aliyuncs.com:3306/cainiaoww_universal_test?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: cainiao_test
+    password: cainiao_test123
+    driverClassName: com.mysql.jdbc.Driver
+    properties:
+      jmxEnabled: true
+      initialSize: 5
+      maxActive: 50
+      minIdle: 5
+      maxIdle: 25
+      maxWait: 10000
+      maxAge: 600000
+      timeBetweenEvictionRunsMillis: 5000
+      minEvictableIdleTimeMillis: 60000
+      validationQuery: SELECT 1
+      validationQueryTimeout: 3
+      validationInterval: 15000
+      testOnBorrow: true
+      testWhileIdle: true
+      testOnReturn: false
+      jdbcInterceptors: ConnectionState
+      defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
