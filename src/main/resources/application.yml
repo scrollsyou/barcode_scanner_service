@@ -1,6 +1,5 @@
 server:
   port: 9021
-  context-path: /${spring.application.name}
 spring:
   application:
     name: barcode_scanner_service
